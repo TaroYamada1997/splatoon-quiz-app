@@ -16,7 +16,7 @@ export default function RootLayout({
         <title>スプラトゥーン クイズ | Splatoon Quiz Game</title>
         <meta
           name="description"
-          content="スプラトゥーンに関する知識を試せる無料クイズゲーム。ブキ、ギア、ステージなど様々なクイズに挑戦しよう！ スプラトゥーン3対応"
+          content="スプラトゥーンに関する知識を試せる無料クイズゲーム。様々なクイズに挑戦しよう！ スプラトゥーン3対応"
         />
         <meta
           name="keywords"
