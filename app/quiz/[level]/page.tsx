@@ -2,6 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { weapons } from "@/constants/weapons";
 import { quizConfigs } from "@/constants/quizConfig";
 import type { Weapon } from "@/constants/weapons";
@@ -168,61 +169,100 @@ export default function QuizPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-4xl mx-auto">
+        {/* クイズカード */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="p-4 sm:p-6 md:p-8">
+            {/* 進捗表示 */}
+            <div className="flex justify-between items-center mb-6">
+              <p className="text-lg sm:text-xl font-medium">
+                問題 {questionNumber + 1} / {quizConfig.totalQuestions}
+              </p>
+            </div>
+
+            {/* 問題表示部分 */}
             <div className="space-y-6">
               <div className="text-center">
-                <div className="flex justify-between items-center mb-4">
-                  <p className="text-lg sm:text-xl">
-                    問題 {questionNumber + 1} / {quizConfig.totalQuestions}
-                  </p>
-                  {/* <p className="text-lg sm:text-xl">
-                    スコア: {score} / {questionNumber}
-                  </p> */}
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="font-bold text-lg sm:text-xl mb-2">
-                    このブキの組み合わせは？
-                  </p>
-                  <p className="text-md sm:text-lg">
-                    サブ: {currentQuestion?.sub}
-                  </p>
-                  <p className="text-md sm:text-lg">
-                    スペシャル: {currentQuestion?.special}
-                  </p>
+                <h2 className="text-xl sm:text-2xl font-bold mb-4">
+                  このブキの組み合わせは？
+                </h2>
+
+                {/* サブとスペシャルの表示 */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {/* サブウェポン */}
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <div className="aspect-square relative mb-2 max-w-[120px] mx-auto">
+                      <Image
+                        src={currentQuestion?.subImg || "/placeholder.png"}
+                        alt={currentQuestion?.sub || ""}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="font-medium">サブ</p>
+                    <p className="text-lg">{currentQuestion?.sub}</p>
+                  </div>
+
+                  {/* スペシャルウェポン */}
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <div className="aspect-square relative mb-2 max-w-[120px] mx-auto">
+                      <Image
+                        src={currentQuestion?.specialImg || "/placeholder.png"}
+                        alt={currentQuestion?.special || ""}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="font-medium">スペシャル</p>
+                    <p className="text-lg">{currentQuestion?.special}</p>
+                  </div>
                 </div>
               </div>
 
+              {/* 選択肢 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {options.map((option, index) => (
-                  <button
-                    key={index}
-                    onClick={() => !showResult && checkAnswer(option)}
-                    disabled={showResult}
-                    className={`
-                      p-4 rounded-lg w-full font-medium transition-colors text-lg
-                      ${
-                        showResult
-                          ? option === currentQuestion?.main
-                            ? "bg-green-500 text-white"
-                            : selectedAnswer === option
-                            ? "bg-red-500 text-white"
-                            : "bg-gray-100"
-                          : "bg-gray-100 hover:bg-gray-200"
-                      }
-                    `}
-                  >
-                    {option}
-                  </button>
-                ))}
+                {options.map((option, index) => {
+                  const weaponData = weapons.find((w) => w.main === option);
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => !showResult && checkAnswer(option)}
+                      disabled={showResult}
+                      className={`
+                        relative p-4 rounded-lg w-full transition-colors
+                        ${
+                          showResult
+                            ? option === currentQuestion?.main
+                              ? "bg-green-500 text-white"
+                              : selectedAnswer === option
+                              ? "bg-red-500 text-white"
+                              : "bg-gray-100"
+                            : "bg-gray-100 hover:bg-gray-200"
+                        }
+                      `}
+                    >
+                      <div className="flex items-center space-x-3">
+                        <div className="relative w-16 h-16">
+                          <Image
+                            src={weaponData?.mainImg || "/placeholder.png"}
+                            alt={option}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <span className="text-lg font-medium">{option}</span>
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
 
+              {/* 結果表示 */}
               {showResult && (
-                <div className="space-y-4">
+                <div className="space-y-4 mt-6">
                   <div
                     className={`
-                      p-4 rounded-lg text-lg
+                      p-4 rounded-lg flex items-center space-x-3
                       ${
                         selectedAnswer === currentQuestion?.main
                           ? "bg-green-100 text-green-700"
@@ -230,7 +270,15 @@ export default function QuizPage() {
                       }
                     `}
                   >
-                    <p>
+                    <div className="relative w-16 h-16">
+                      <Image
+                        src={currentQuestion?.mainImg || "/placeholder.png"}
+                        alt={currentQuestion?.main || ""}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-lg">
                       {selectedAnswer === currentQuestion?.main
                         ? "正解！"
                         : `不正解... 正解は${currentQuestion?.main}でした`}
@@ -238,7 +286,7 @@ export default function QuizPage() {
                   </div>
                   <button
                     onClick={nextQuestion}
-                    className="w-full bg-blue-500 text-white rounded-lg py-3 sm:py-4 px-4 hover:bg-blue-600 transition-colors text-lg"
+                    className="w-full bg-blue-500 text-white rounded-lg py-4 px-6 text-lg font-medium hover:bg-blue-600 transition-colors"
                   >
                     {questionNumber + 1 === quizConfig.totalQuestions
                       ? "結果を見る"
