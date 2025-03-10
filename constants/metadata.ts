@@ -7,8 +7,10 @@ export const metadata: Metadata = {
   keywords:
     "スプラトゥーン,スプラトゥーン3,クイズ,ゲーム,Splatoon,Quiz,無料,ブキ,ギア",
   icons: {
-    icon: "/icon/favicon/favicon.ico",
+    icon: { url: "/icon/favicon/favicon.ico" },
+    shortcut: "/icon/favicon/favicon.ico",
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "スプラトゥーン クイズ | Splatoon Quiz Game",
     description: "スプラトゥーンに関する知識を試せる無料クイズゲーム。",
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://splatoon3-quiz.com",
     images: [
       {
-        url: "icon/icon_black.svg", // OGP画像のパス
+        url: "https://splatoon3-quiz.com/ogp.png",
         width: 1200,
         height: 630,
         alt: "スプラトゥーン クイズ",
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@YourTwitterHandle", // あなたのTwitterハンドル（任意）
+    site: "@YourTwitterHandle",
     images: ["https://splatoon3-quiz.com/ogp.png"],
   },
 };
