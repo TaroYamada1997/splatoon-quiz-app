@@ -83,7 +83,7 @@ export default function QuizPage() {
 
   // ツイートを共有
   const shareOnTwitter = () => {
-    const text = `スプラトゥーンブキクイズで${score}/${quizConfig.totalQuestions}点を獲得しました！#スプラトゥーン3ブキクイズ`;
+    const text = `スプラトゥーン3ブキクイズで${score}/${quizConfig.totalQuestions}点を獲得しました！#スプラトゥーン3ブキクイズ`;
     const url = window.location.href;
     window.open(
       `https://x.com/intent/tweet?text=${encodeURIComponent(
@@ -102,14 +102,14 @@ export default function QuizPage() {
 
   if (isQuizComplete) {
     return (
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4 sm:py-8">
         <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">
+            <div className="p-4 sm:p-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-center text-gray-900 mb-2">
                 {quizConfig.title} クリア！
               </h2>
-              <p className="text-center text-gray-600 mb-6">
+              <p className="text-center text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
                 全{quizConfig.totalQuestions}問中{score}問正解
               </p>
 
@@ -132,22 +132,22 @@ export default function QuizPage() {
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <button
                     onClick={() => restartQuiz()}
-                    className="w-full bg-blue-500 text-white rounded-lg p-4 hover:bg-blue-600 transition-colors"
+                    className="w-full bg-blue-500 text-white rounded-lg p-3 sm:p-4 hover:bg-blue-600 active:bg-blue-700 transition-colors text-sm sm:text-base font-medium min-h-[48px]"
                   >
                     もう一度チャレンジ
                   </button>
                   <button
                     onClick={goHome}
-                    className="w-full bg-gray-100 text-gray-700 rounded-lg p-4 hover:bg-gray-200 transition-colors"
+                    className="w-full bg-gray-100 text-gray-700 rounded-lg p-3 sm:p-4 hover:bg-gray-200 active:bg-gray-300 transition-colors text-sm sm:text-base font-medium min-h-[48px]"
                   >
                     ホームに戻る
                   </button>
                   <button
                     onClick={shareOnTwitter}
-                    className="w-full bg-black text-white rounded-lg p-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
+                    className="w-full bg-black text-white rounded-lg p-3 sm:p-4 hover:bg-gray-800 active:bg-gray-900 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base font-medium min-h-[48px]"
                   >
                     <svg
                       className="w-5 h-5"
@@ -168,30 +168,30 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-4 sm:py-8">
       <div className="max-w-4xl mx-auto">
         {/* クイズカード */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="p-4 sm:p-6 md:p-8">
             {/* 進捗表示 */}
-            <div className="flex justify-between items-center mb-6">
-              <p className="text-lg sm:text-xl font-medium">
+            <div className="flex justify-between items-center mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg font-medium">
                 問題 {questionNumber + 1} / {quizConfig.totalQuestions}
               </p>
             </div>
 
             {/* 問題表示部分 */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div className="text-center">
-                <h2 className="text-xl sm:text-2xl font-bold mb-4">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">
                   このブキの組み合わせは？
                 </h2>
 
                 {/* サブとスペシャルの表示 */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                   {/* サブウェポン */}
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="aspect-square relative mb-2 max-w-[120px] mx-auto">
+                  <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                    <div className="aspect-square relative mb-2 max-w-[100px] sm:max-w-[120px] mx-auto">
                       <Image
                         src={currentQuestion?.subImg || "/placeholder.png"}
                         alt={currentQuestion?.sub || ""}
@@ -199,13 +199,15 @@ export default function QuizPage() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="font-medium">サブ</p>
-                    <p className="text-lg">{currentQuestion?.sub}</p>
+                    <p className="font-medium text-sm sm:text-base">サブ</p>
+                    <p className="text-sm sm:text-lg font-medium">
+                      {currentQuestion?.sub}
+                    </p>
                   </div>
 
                   {/* スペシャルウェポン */}
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="aspect-square relative mb-2 max-w-[120px] mx-auto">
+                  <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                    <div className="aspect-square relative mb-2 max-w-[100px] sm:max-w-[120px] mx-auto">
                       <Image
                         src={currentQuestion?.specialImg || "/placeholder.png"}
                         alt={currentQuestion?.special || ""}
@@ -213,14 +215,18 @@ export default function QuizPage() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="font-medium">スペシャル</p>
-                    <p className="text-lg">{currentQuestion?.special}</p>
+                    <p className="font-medium text-sm sm:text-base">
+                      スペシャル
+                    </p>
+                    <p className="text-sm sm:text-lg font-medium">
+                      {currentQuestion?.special}
+                    </p>
                   </div>
                 </div>
               </div>
 
               {/* 選択肢 */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {options.map((option, index) => {
                   const weaponData = weapons.find((w) => w.main === option);
                   return (
@@ -229,7 +235,7 @@ export default function QuizPage() {
                       onClick={() => !showResult && checkAnswer(option)}
                       disabled={showResult}
                       className={`
-                        relative p-4 rounded-lg w-full transition-colors
+                        relative p-3 sm:p-4 rounded-lg w-full transition-colors min-h-[60px] sm:min-h-[72px] active:scale-95
                         ${
                           showResult
                             ? option === currentQuestion?.main
@@ -237,12 +243,12 @@ export default function QuizPage() {
                               : selectedAnswer === option
                               ? "bg-red-500 text-white"
                               : "bg-gray-100"
-                            : "bg-gray-100 hover:bg-gray-200"
+                            : "bg-gray-100 hover:bg-gray-200 active:bg-gray-300"
                         }
                       `}
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="relative w-16 h-16">
+                        <div className="relative w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0">
                           <Image
                             src={weaponData?.mainImg || "/placeholder.png"}
                             alt={option}
@@ -250,7 +256,9 @@ export default function QuizPage() {
                             className="object-contain"
                           />
                         </div>
-                        <span className="text-lg font-medium">{option}</span>
+                        <span className="text-sm sm:text-lg font-medium text-left">
+                          {option}
+                        </span>
                       </div>
                     </button>
                   );
@@ -259,10 +267,10 @@ export default function QuizPage() {
 
               {/* 結果表示 */}
               {showResult && (
-                <div className="space-y-4 mt-6">
+                <div className="space-y-3 sm:space-y-4 mt-4 sm:mt-6">
                   <div
                     className={`
-                      p-4 rounded-lg flex items-center space-x-3
+                      p-3 sm:p-4 rounded-lg flex items-center space-x-3
                       ${
                         selectedAnswer === currentQuestion?.main
                           ? "bg-green-100 text-green-700"
@@ -270,7 +278,7 @@ export default function QuizPage() {
                       }
                     `}
                   >
-                    <div className="relative w-16 h-16">
+                    <div className="relative w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0">
                       <Image
                         src={currentQuestion?.mainImg || "/placeholder.png"}
                         alt={currentQuestion?.main || ""}
@@ -278,7 +286,7 @@ export default function QuizPage() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-lg">
+                    <p className="text-sm sm:text-lg font-medium">
                       {selectedAnswer === currentQuestion?.main
                         ? "正解！"
                         : `不正解... 正解は${currentQuestion?.main}でした`}
@@ -286,7 +294,7 @@ export default function QuizPage() {
                   </div>
                   <button
                     onClick={nextQuestion}
-                    className="w-full bg-blue-500 text-white rounded-lg py-4 px-6 text-lg font-medium hover:bg-blue-600 transition-colors"
+                    className="w-full bg-blue-500 text-white rounded-lg py-3 sm:py-4 px-6 text-base sm:text-lg font-medium hover:bg-blue-600 active:bg-blue-700 transition-colors min-h-[48px]"
                   >
                     {questionNumber + 1 === quizConfig.totalQuestions
                       ? "結果を見る"

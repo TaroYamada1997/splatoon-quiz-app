@@ -117,5 +117,46 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* タッチデバイス対応のスタイル */
+  @media (hover: none) and (pointer: coarse) {
+    /* タッチデバイスでのホバー効果を無効化 */
+    .touch-friendly {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* ボタンのタップ時の視覚的フィードバック */
+    button, [role="button"], .group {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    /* スクロール時の慣性を有効にする */
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+  /* すべてのデバイスでタップ時の青いハイライトを調整 */
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ズームを防ぐためのメタビューポート対応 */
+  input, select, textarea {
+    font-size: 16px; /* iOS Safari でズームを防ぐ */
+  }
+  
+  @media screen and (max-width: 768px) {
+    input, select, textarea {
+      font-size: 16px !important; /* 強制的に16px以上にしてズームを防ぐ */
+    }
   }
 }

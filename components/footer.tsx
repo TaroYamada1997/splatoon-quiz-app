@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
         <hr className="border-gray-700 my-6" />
         <div className="text-center text-gray-300">
-          <p>&copy; 2025 スプラトゥーン ブキクイズ. All rights reserved.</p>
+          <p>&copy; 2025 スプラトゥーン3 ブキクイズ. All rights reserved.</p>
         </div>
       </div>
     </footer>
