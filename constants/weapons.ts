@@ -29,6 +29,8 @@ const subWeapons: SubWeapon = {
   inkMine: "トラップ",
   poisonMist: "ポイズンミスト",
   pointSensor: "ポイントセンサー",
+  lineMarker: "ラインマーカー",
+  jumpBeacon: "ジャンプビーコン",
 };
 
 const specialWeapons: SpecialWeapon = {
@@ -114,6 +116,14 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.トリプルトルネード,
   },
   {
+    main: "スプラシューター煌",
+    sub: "クイックボム",
+    special: "テイオウイカ",
+    mainImg: "/main/スプラシューター煌.png",
+    subImg: subImg.クイックボム,
+    specialImg: specialImg.テイオウイカ,
+  },
+  {
     main: "わかばシューター",
     sub: subWeapons.splatBomb,
     special: specialWeapons.bigBarrier,
@@ -144,6 +154,14 @@ export const weapons: Weapon[] = [
     mainImg: "/main/5.png",
     subImg: subImg.スプリンクラー,
     specialImg: specialImg.ナイスダマ,
+  },
+  {
+    main: "プロモデラー彩",
+    sub: "クイックボム",
+    special: "スミナガシート",
+    mainImg: "/main/プロモデラー彩.png",
+    subImg: subImg.クイックボム,
+    specialImg: specialImg.スミナガシート,
   },
   {
     main: "52ガロン",
@@ -177,6 +195,15 @@ export const weapons: Weapon[] = [
     subImg: subImg.スプリンクラー,
     specialImg: specialImg.キューインキ,
   },
+  /** リールガン系統 */
+  {
+    main: "L3リールガン箔",
+    sub: "スプラッシュボム",
+    special: "ジェットパック",
+    mainImg: "/main/L3リールガン箔.png",
+    subImg: subImg.スプラッシュボム,
+    specialImg: specialImg.ジェットパック,
+  },
   /** フデ系統 */
   {
     main: "パブロ",
@@ -194,6 +221,22 @@ export const weapons: Weapon[] = [
     subImg: subImg.トラップ,
     specialImg: specialImg.ウルトラハンコ,
   },
+  {
+    main: "ホクサイ彗",
+    sub: "ロボットボム",
+    special: "テイオウイカ",
+    mainImg: "/main/ホクサイ彗.png",
+    subImg: subImg.ロボットボム,
+    specialImg: specialImg.テイオウイカ,
+  },
+  {
+    main: "フィンセントBRNZ",
+    sub: "スプラッシュシールド",
+    special: "ウルトラショット",
+    mainImg: "/main/フィンセントBRNZ.png",
+    subImg: subImg.スプラッシュシールド,
+    specialImg: specialImg.ウルトラショット,
+  },
   /** ローラー系統 */
   {
     main: "スプラローラー",
@@ -210,6 +253,22 @@ export const weapons: Weapon[] = [
     mainImg: "/main/15.png",
     subImg: subImg.スプラッシュシールド,
     specialImg: specialImg.キューインキ,
+  },
+  {
+    main: "ワイドローラー惑",
+    sub: "トーピード",
+    special: "ウルトラチャクチ",
+    mainImg: "/main/ワイドローラー惑.png",
+    subImg: subImg.トーピード,
+    specialImg: specialImg.ウルトラチャクチ,
+  },
+  {
+    main: "ダイナモローラー冥",
+    sub: subWeapons.pointSensor,
+    special: specialWeapons.killerWail,
+    mainImg: "/main/ダイナモローラー冥.png",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg["メガホンレーザー5.1ch"],
   },
   /** チャージャー系統 */
   {
@@ -275,6 +334,14 @@ export const weapons: Weapon[] = [
     mainImg: "/main/23.png",
     subImg: subImg.タンサンボム,
     specialImg: specialImg.ウルトラハンコ,
+  },
+  {
+    main: "スプラチャージャーFRST",
+    sub: "スプリンクラー",
+    special: "カニタンク",
+    mainImg: "/main/スプラチャージャーFRST.png",
+    subImg: subImg.スプリンクラー,
+    specialImg: specialImg.カニタンク,
   },
   /** スピナー系統 */
   {
@@ -358,6 +425,38 @@ export const weapons: Weapon[] = [
     subImg: subImg.スプラッシュボム,
     specialImg: specialImg.トリプルトルネード,
   },
+  {
+    main: "ヒッセン",
+    sub: "ポイズンミスト",
+    special: "ジェットパック",
+    mainImg: "/main/ヒッセン.png",
+    subImg: subImg.ポイズンミスト,
+    specialImg: specialImg.ジェットパック,
+  },
+  {
+    main: "ヒッセン・ヒュー",
+    sub: "タンサンボム",
+    special: "エナジースタンド",
+    mainImg: "/main/ヒッセン・ヒュー.png",
+    subImg: subImg.タンサンボム,
+    specialImg: specialImg.エナジースタンド,
+  },
+  {
+    main: "ヒッセンASH",
+    sub: "スプラッシュボム",
+    special: "スミナガシート",
+    mainImg: "/main/ヒッセンASH.png",
+    subImg: subImg.スプラッシュボム,
+    specialImg: specialImg.スミナガシート,
+  },
+  {
+    main: "モップリン角",
+    sub: "カーリングボム",
+    special: "カニタンク",
+    mainImg: "/main/モップリン角.png",
+    subImg: subImg.カーリングボム,
+    specialImg: specialImg.カニタンク,
+  },
   /** マニューバー系統 */
   {
     main: "スプラマニューバー",
@@ -366,6 +465,22 @@ export const weapons: Weapon[] = [
     mainImg: "/main/34.png",
     subImg: subImg.スプラッシュボム,
     specialImg: specialImg.カニタンク,
+  },
+  {
+    main: "スプラマニューバー耀",
+    sub: "タンサンボム",
+    special: "グレートバリア",
+    mainImg: "/main/スプラマニューバー耀.png",
+    subImg: subImg.タンサンボム,
+    specialImg: specialImg.グレートバリア,
+  },
+  {
+    main: "デュアルスイーパー蹄",
+    sub: "ポイントセンサー",
+    special: "スミナガシート",
+    mainImg: "/main/デュアルスイーパー蹄.png",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg.スミナガシート,
   },
   /** ブラスター系統 */
   {
@@ -383,6 +498,14 @@ export const weapons: Weapon[] = [
     mainImg: "/main/36.png",
     subImg: subImg.カーリングボム,
     specialImg: specialImg.ウルトラチャクチ,
+  },
+  {
+    main: "ホットブラスター艶",
+    sub: subWeapons.jumpBeacon,
+    special: specialWeapons.crabTank,
+    mainImg: "/main/ホットブラスター艶.png",
+    subImg: subImg.ジャンプビーコン,
+    specialImg: specialImg.カニタンク,
   },
   /** シェルター系統 */
   {
@@ -402,6 +525,14 @@ export const weapons: Weapon[] = [
     subImg: subImg.トーピード,
     specialImg: specialImg.ウルトラハンコ,
   },
+  {
+    main: "ドライブワイパーRUST",
+    sub: "カーリングボム",
+    special: "ウルトラショット",
+    mainImg: "/main/ドライブワイパーRUST.png",
+    subImg: subImg.カーリングボム,
+    specialImg: specialImg.ウルトラショット,
+  },
   /** ストリンガー系統 */
   {
     main: "LACT-450",
@@ -410,5 +541,21 @@ export const weapons: Weapon[] = [
     mainImg: "/main/39.png",
     subImg: subImg.カーリングボム,
     specialImg: specialImg.マルチミサイル,
+  },
+  {
+    main: "LACT-450MILK",
+    sub: "トーピード",
+    special: "ナイスダマ",
+    mainImg: "/main/LACT-450MILK.png",
+    subImg: subImg.トーピード,
+    specialImg: specialImg.ナイスダマ,
+  },
+  {
+    main: "トライストリンガー燈",
+    sub: "ラインマーカー",
+    special: "ジェットパック",
+    mainImg: "/main/トライストリンガー燈.png",
+    subImg: subImg.ラインマーカー,
+    specialImg: specialImg.ジェットパック,
   },
 ];
