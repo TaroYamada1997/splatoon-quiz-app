@@ -14,6 +14,17 @@ export default function HomePage() {
           </p>
         </div>
 
+        <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-8">
+          <div className="flex items-center justify-center text-center">
+            <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
+              最新対応
+            </div>
+            <p className="text-green-800 font-medium">
+              スプラトゥーン3 Ver. 10.0.1 に対応しています
+            </p>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-6">
           {Object.entries(quizConfigs).map(([key, config]) => (
             <Link href={`/quiz/${key}`} key={key} className="block group">
