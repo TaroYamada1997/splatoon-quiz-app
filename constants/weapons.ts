@@ -297,12 +297,52 @@ export const weapons: Weapon[] = [
   },
   /** リールガン系統 */
   {
+    main: "L3リールガン",
+    sub: "カーリングボム",
+    special: "カニタンク",
+    mainImg: "/main/L3リールガン.png",
+    subImg: subImg.カーリングボム,
+    specialImg: specialImg.カニタンク,
+  },
+  {
+    main: "L3リールガンD",
+    sub: "クイックボム",
+    special: "ウルトラハンコ",
+    mainImg: "/main/L3リールガンD.png.webp",
+    subImg: subImg.クイックボム,
+    specialImg: specialImg.ウルトラハンコ,
+  },
+  {
     main: "L3リールガン箔",
     sub: "スプラッシュボム",
     special: "ジェットパック",
     mainImg: "/main/L3リールガン箔.png",
     subImg: subImg.スプラッシュボム,
     specialImg: specialImg.ジェットパック,
+  },
+  {
+    main: "H3リールガン",
+    sub: "ポイントセンサー",
+    special: "エナジースタンド",
+    mainImg: "/main/H3リールガン.png",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg.エナジースタンド,
+  },
+  {
+    main: "H3リールガンD",
+    sub: "スプラッシュシールド",
+    special: "グレートバリア",
+    mainImg: "/main/H3リールガンD.png",
+    subImg: subImg.スプラッシュシールド,
+    specialImg: specialImg.グレートバリア,
+  },
+  {
+    main: "H3リールガンSNAK",
+    sub: "キューバンボム",
+    special: "トリプルトルネード",
+    mainImg: "/main/H3リールガンSNAK.png",
+    subImg: subImg.キューバンボム,
+    specialImg: specialImg.トリプルトルネード,
   },
   /** フデ系統 */
   {
@@ -485,6 +525,14 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.グレートバリア,
   },
   {
+    main: "スプラスピナーPYTN",
+    sub: "ジャンプビーコン",
+    special: "ウルトラショット",
+    mainImg: "/main/スプラスピナーPYTN.png",
+    subImg: subImg.ジャンプビーコン,
+    specialImg: specialImg.ウルトラショット,
+  },
+  {
     main: "ノーチラス47",
     sub: subWeapons.pointSensor,
     special: specialWeapons.inkStorm,
@@ -623,6 +671,31 @@ export const weapons: Weapon[] = [
     subImg: subImg.ポイントセンサー,
     specialImg: specialImg.スミナガシート,
   },
+  /** スパッタリー */
+  {
+    main: "スパッタリー",
+    sub: subWeapons.jumpBeacon,
+    special: specialWeapons.tacticooler,
+    mainImg: "/main/スパッタリー.png",
+    subImg: subImg.ジャンプビーコン,
+    specialImg: specialImg.エナジースタンド,
+  },
+  {
+    main: "スパッタリー・ヒュー",
+    sub: subWeapons.torpedo,
+    special: specialWeapons.reefslider,
+    mainImg: "/main/スパッタリー・ヒュー.png",
+    subImg: subImg.トーピード,
+    specialImg: specialImg.サメライド,
+  },
+  {
+    main: "スパッタリーOWL",
+    sub: subWeapons.splatBomb,
+    special: specialWeapons.killerWail,
+    mainImg: "/main/スパッタリーOWL.png",
+    subImg: subImg.スプラッシュボム,
+    specialImg: specialImg["メガホンレーザー5.1ch"],
+  },
   /** ブラスター系統 */
   {
     main: "ホットブラスター",
@@ -691,6 +764,32 @@ export const weapons: Weapon[] = [
     subImg: subImg.スプリンクラー,
     specialImg: specialImg.ジェットパック,
   },
+  /** 黒傘 */
+  {
+    main: "スパイガジェット",
+    sub: subWeapons.inkMine,
+    special: specialWeapons.reefslider,
+    mainImg: "/main/スパイガジェット.png",
+    subImg: subImg.トラップ,
+    specialImg: specialImg.サメライド,
+  },
+  {
+    main: "スパイガジェットガジェットソレ－ラ",
+    sub: subWeapons.torpedo,
+    special: specialWeapons.splattercolorScreen,
+    mainImg: "/main/スパイガジェットソレーラ.png",
+    subImg: subImg.トーピード,
+    specialImg: specialImg.スミナガシート,
+  },
+  {
+    main: "スパイガジェット繚",
+    sub: "カーリングボム",
+    special: specialWeapons.killerWail,
+    mainImg: "/main/スパイガジェット繚.png",
+    subImg: subImg.カーリングボム,
+    specialImg: specialImg["メガホンレーザー5.1ch"],
+  },
+  /** キャンプ */
   {
     main: "キャンピングシェルター",
     sub: "ジャンプビーコン",
@@ -773,6 +872,23 @@ export const weapons: Weapon[] = [
     subImg: subImg.トーピード,
     specialImg: specialImg.ナイスダマ,
   },
+  /** トラスト */
+  {
+    main: "トライストリンガー",
+    sub: "ポイズンミスト",
+    special: specialWeapons.killerWail,
+    mainImg: "/main/トライストリンガー.png",
+    subImg: subImg.ポイズンミスト,
+    specialImg: specialImg["メガホンレーザー5.1ch"],
+  },
+  {
+    main: "トライストリンガーコラボ",
+    sub: "スプリンクラー",
+    special: "デコイチラシ",
+    mainImg: "/main/トライストリンガーコラボ.png",
+    subImg: subImg.スプリンクラー,
+    specialImg: specialImg.デコイチラシ,
+  },
   {
     main: "トライストリンガー燈",
     sub: "ラインマーカー",
@@ -780,5 +896,22 @@ export const weapons: Weapon[] = [
     mainImg: "/main/トライストリンガー燈.png",
     subImg: subImg.ラインマーカー,
     specialImg: specialImg.ジェットパック,
+  },
+  /** フルイド */
+  {
+    main: "フルイドV",
+    sub: "ロボットボム",
+    special: "ウルトラハンコ",
+    mainImg: "/main/フルイドV.png.webp",
+    subImg: subImg.ロボットボム,
+    specialImg: specialImg.ウルトラハンコ,
+  },
+  {
+    main: "フルイドVカスタム",
+    sub: "ポイントセンサー",
+    special: "ホップソナー",
+    mainImg: "/main/フルイドVカスタム.png.webp",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg.ホップソナー,
   },
 ];
