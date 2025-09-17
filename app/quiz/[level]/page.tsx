@@ -84,7 +84,7 @@ export default function QuizPage() {
   // ツイートを共有
   const shareOnTwitter = () => {
     const text = `スプラトゥーン3ブキクイズで${score}/${quizConfig.totalQuestions}点を獲得しました！#スプラトゥーン3ブキクイズ`;
-    const url = window.location.href;
+    const url = "https://splatoon3-quiz.com";
     window.open(
       `https://x.com/intent/tweet?text=${encodeURIComponent(
         text
