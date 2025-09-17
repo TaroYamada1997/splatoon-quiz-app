@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OGP Image Converter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #canvas {
+            border: 1px solid #ccc;
+        }
+        .instructions {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h3>OGP画像変換ツール</h3>
+        <p>1. 下のキャンバスを右クリック → 「画像を保存」を選択</p>
+        <p>2. ファイル名を「ogp.png」として保存</p>
+        <p>3. 保存した画像をpublicフォルダに移動</p>
+    </div>
+
+    <canvas id="canvas" width="1200" height="630"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Create gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+        gradient.addColorStop(0, '#ff6b35');
+        gradient.addColorStop(0.5, '#f7931e');
+        gradient.addColorStop(1, '#ffcc02');
+
+        // Fill background
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 1200, 630);
+
+        // Add geometric shapes for pop effect
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+
+        // Triangles
+        ctx.beginPath();
+        ctx.moveTo(150, 100);
+        ctx.lineTo(200, 100);
+        ctx.lineTo(175, 150);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(1000, 150);
+        ctx.lineTo(1050, 120);
+        ctx.lineTo(1080, 180);
+        ctx.closePath();
+        ctx.fill();
+
+        // Circles
+        ctx.beginPath();
+        ctx.arc(250, 500, 25, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(950, 450, 20, 0, 2 * Math.PI);
+        ctx.fill();
+
+        // Rectangles
+        ctx.fillRect(80, 350, 40, 40);
+        ctx.fillRect(1050, 300, 35, 35);
+
+        // Stars
+        function drawStar(cx, cy, size) {
+            ctx.beginPath();
+            for (let i = 0; i < 5; i++) {
+                const angle = (i * 4 * Math.PI) / 5 - Math.PI / 2;
+                const x = cx + Math.cos(angle) * size;
+                const y = cy + Math.sin(angle) * size;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        drawStar(400, 120, 15);
+        drawStar(800, 520, 12);
+
+        // Add shadow for text
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
+        ctx.shadowBlur = 6;
+        ctx.shadowOffsetX = 3;
+        ctx.shadowOffsetY = 6;
+
+        // Add main title with bigger, bolder style
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 56px "Helvetica Neue", Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('スプラトゥーン クイズ', 600, 300);
+
+        // Add subtitle with more contrast
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+        ctx.font = 'bold 28px "Helvetica Neue", Arial, sans-serif';
+        ctx.fillText('Splatoon Quiz Game', 600, 345);
+
+        // Add fun accent text
+        ctx.shadowBlur = 3;
+        ctx.shadowOffsetX = 2;
+        ctx.shadowOffsetY = 3;
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.font = '18px "Helvetica Neue", Arial, sans-serif';
+        ctx.fillText('知識を試そう！', 600, 380);
+
+        // Reset shadow
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 0;
+    </script>
+</body>
+</html>

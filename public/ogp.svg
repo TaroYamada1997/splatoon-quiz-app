@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f7931e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcc02;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Geometric shapes for pop effect -->
+  <g fill="rgba(255,255,255,0.15)">
+    <!-- Triangles -->
+    <polygon points="150,100 200,100 175,150"/>
+    <polygon points="1000,150 1050,120 1080,180"/>
+
+    <!-- Circles -->
+    <circle cx="250" cy="500" r="25"/>
+    <circle cx="950" cy="450" r="20"/>
+
+    <!-- Rectangles -->
+    <rect x="80" y="350" width="40" height="40"/>
+    <rect x="1050" y="300" width="35" height="35"/>
+
+    <!-- Stars -->
+    <path d="M400,105 L407,122 L425,122 L411,133 L418,150 L400,139 L382,150 L389,133 L375,122 L393,122 Z"/>
+    <path d="M800,508 L806,520 L819,520 L809,528 L815,540 L800,532 L785,540 L791,528 L781,520 L794,520 Z"/>
+  </g>
+
+  <!-- Main content -->
+  <g transform="translate(600, 315)">
+    <!-- Title -->
+    <text x="0" y="-15" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="56" font-weight="bold" fill="white" filter="url(#shadow)">スプラトゥーン クイズ</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="30" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="bold" fill="white" opacity="0.95" filter="url(#shadow)">Splatoon Quiz Game</text>
+
+    <!-- Accent text -->
+    <text x="0" y="65" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="white" opacity="0.8" filter="url(#shadow)">知識を試そう！</text>
+  </g>
+</svg>

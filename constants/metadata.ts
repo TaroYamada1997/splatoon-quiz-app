@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@YourTwitterHandle",
     images: ["https://splatoon3-quiz.com/ogp.png"],
   },
 };
