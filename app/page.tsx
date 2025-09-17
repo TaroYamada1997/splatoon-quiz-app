@@ -20,7 +20,7 @@ export default function HomePage() {
               最新対応
             </div>
             <p className="text-green-800 font-medium text-sm sm:text-base">
-              スプラトゥーン3 Ver. 10.0.1 に対応しています
+              スプラトゥーン3 Ver. 10.1.0 に対応しています
             </p>
           </div>
         </div>
