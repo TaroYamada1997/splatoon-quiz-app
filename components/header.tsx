@@ -27,6 +27,12 @@ export default function Header() {
                 <House />
                 ホーム
               </Link>
+              <Link
+                href="/roulette"
+                className="text-white hover:bg-yellow-500 px-3 py-2 rounded-md flex items-center gap-2"
+              >
+                🎲 ブキルーレット
+              </Link>
             </div>
           </div>
         </div>

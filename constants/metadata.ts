@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "スプラトゥーン クイズ | Splatoon Quiz Game",
+  title: "スプラトゥーン3 クイズ＆ブキルーレット | Splatoon3 Quiz & Roulette",
   description:
-    "スプラトゥーンに関する知識を試せる無料クイズゲーム。ブキ、ギア、ステージなど様々なクイズに挑戦しよう！ スプラトゥーン3対応",
+    "スプラトゥーン3のブキクイズとブキルーレットが遊べる無料サイト。サブとスペシャルからメインブキを当てるクイズや、最大8人でブキをランダム決めできるルーレットを楽しもう！",
   keywords:
-    "スプラトゥーン,スプラトゥーン3,クイズ,ゲーム,Splatoon,Quiz,無料,ブキ,ギア",
+    "スプラトゥーン,スプラトゥーン3,クイズ,ゲーム,Splatoon,Quiz,無料,ブキ,ルーレット,スプラ ルーレット,スプラトゥーン ルーレット,武器決め,ブキ振り分け,ランダム武器,スプラ3",
   icons: {
     icon: { url: "/icon/favicon/favicon.ico" },
     shortcut: "/icon/favicon/favicon.ico",

@@ -50,6 +50,30 @@ export default function HomePage() {
               </div>
             </Link>
           ))}
+
+          {/* ブキルーレット */}
+          <Link href="/roulette" className="block group">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105 active:scale-95 border-2 border-yellow-400">
+              <div className="p-4 sm:p-6">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+                    ブキルーレット
+                  </h2>
+                  <span className="px-2 sm:px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs sm:text-sm font-medium">
+                    最大8人
+                  </span>
+                </div>
+                <p className="text-gray-600 mb-4 text-sm sm:text-base">
+                  プレイヤーに使用ブキをランダムで割り当て！友達と一緒に遊ぼう。
+                </p>
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <span className="text-yellow-600 group-hover:text-yellow-700 font-medium">
+                    ルーレットを回す →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
 
         <div className="mt-8 sm:mt-12 bg-blue-50 rounded-xl p-4 sm:p-6">

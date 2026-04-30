@@ -95,7 +95,6 @@ const specialImg = {
 
 /**
  * ブキデータ
- * TODO: この辺はリファクタ案件
  */
 export const weapons: Weapon[] = [
   /** シューター系統 */
@@ -178,6 +177,22 @@ export const weapons: Weapon[] = [
     mainImg: "/main/10.png",
     subImg: subImg.ロボットボム,
     specialImg: specialImg.デコイチラシ,
+  },
+  {
+    main: "スペースシューター",
+    sub: subWeapons.pointSensor,
+    special: specialWeapons.killerWail,
+    mainImg: "/main/スペースシューター.png",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg["メガホンレーザー5.1ch"],
+  },
+  {
+    main: "スペースシューターコラボ",
+    sub: subWeapons.inkMine,
+    special: specialWeapons.jetPack,
+    mainImg: "/main/スペースシューターコラボ.png",
+    subImg: subImg.トラップ,
+    specialImg: specialImg.ジェットパック,
   },
   /** ガロン */
   {
@@ -286,7 +301,40 @@ export const weapons: Weapon[] = [
     subImg: subImg.ジャンプビーコン,
     specialImg: specialImg["メガホンレーザー5.1ch"],
   },
+  /** ボトルガイザー */
+  {
+    main: "ボトルガイザー",
+    sub: subWeapons.splashWall,
+    special: specialWeapons.trizooka,
+    mainImg: "/main/ボトルガイザー.png",
+    subImg: subImg.スプラッシュシールド,
+    specialImg: specialImg.ウルトラショット,
+  },
+  {
+    main: "ボトルガイザーフォイル",
+    sub: subWeapons.autobomb,
+    special: specialWeapons.splattercolorScreen,
+    mainImg: "/main/ボトルガイザーフォイル.png",
+    subImg: subImg.ロボットボム,
+    specialImg: specialImg.スミナガシート,
+  },
   /** スイーパー系統 */
+  {
+    main: "ジェットスイーパー",
+    sub: subWeapons.lineMarker,
+    special: specialWeapons.inkVac,
+    mainImg: "/main/ジェットスイーパー.png",
+    subImg: subImg.ラインマーカー,
+    specialImg: specialImg.キューインキ,
+  },
+  {
+    main: "ジェットスイーパーカスタム",
+    sub: subWeapons.poisonMist,
+    special: specialWeapons.inkStorm,
+    mainImg: "/main/ジェットスイーパーカスタム.png.webp",
+    subImg: subImg.ポイズンミスト,
+    specialImg: specialImg.アメフラシ,
+  },
   {
     main: "ジェットスイーパーCOBR",
     sub: "クイックボム",
@@ -362,12 +410,44 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.ウルトラハンコ,
   },
   {
+    main: "ホクサイ",
+    sub: subWeapons.suctionBomb,
+    special: "ショクワンダー",
+    mainImg: "/main/ホクサイ.png",
+    subImg: subImg.キューバンボム,
+    specialImg: specialImg.ショクワンダー,
+  },
+  {
+    main: "ホクサイヒュー",
+    sub: subWeapons.jumpBeacon,
+    special: specialWeapons.inkStorm,
+    mainImg: "/main/ホクサイ・ヒュー.png",
+    subImg: subImg.ジャンプビーコン,
+    specialImg: specialImg.アメフラシ,
+  },
+  {
     main: "ホクサイ彗",
     sub: "ロボットボム",
     special: "テイオウイカ",
     mainImg: "/main/ホクサイ彗.png",
     subImg: subImg.ロボットボム,
     specialImg: specialImg.テイオウイカ,
+  },
+  {
+    main: "フィンセント",
+    sub: subWeapons.curlingBomb,
+    special: specialWeapons.waveBreaker,
+    mainImg: "/main/フィンセント.png",
+    subImg: subImg.カーリングボム,
+    specialImg: specialImg.ホップソナー,
+  },
+  {
+    main: "フィンセントヒュー",
+    sub: subWeapons.pointSensor,
+    special: specialWeapons.tentaMissiles,
+    mainImg: "/main/フィンセント・ヒュー.png",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg.マルチミサイル,
   },
   {
     main: "フィンセントBRNZ",
@@ -387,6 +467,14 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.グレートバリア,
   },
   {
+    main: "スプラローラーコラボ",
+    sub: subWeapons.jumpBeacon,
+    special: specialWeapons.krakenRoyale,
+    mainImg: "/main/スプラローラーコラボ.png.webp",
+    subImg: subImg.ジャンプビーコン,
+    specialImg: specialImg.テイオウイカ,
+  },
+  {
     main: "ワイドローラー",
     sub: subWeapons.splashWall,
     special: specialWeapons.inkVac,
@@ -395,12 +483,36 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.キューインキ,
   },
   {
+    main: "ワイドローラーコラボ",
+    sub: subWeapons.lineMarker,
+    special: specialWeapons.inkStorm,
+    mainImg: "/main/ワイドローラーコラボ.png",
+    subImg: subImg.ラインマーカー,
+    specialImg: specialImg.アメフラシ,
+  },
+  {
     main: "ワイドローラー惑",
     sub: "トーピード",
     special: "ウルトラチャクチ",
     mainImg: "/main/ワイドローラー惑.png",
     subImg: subImg.トーピード,
     specialImg: specialImg.ウルトラチャクチ,
+  },
+  {
+    main: "ダイナモローラー",
+    sub: subWeapons.sprinkler,
+    special: specialWeapons.tacticooler,
+    mainImg: "/main/ダイナモローラー.png",
+    subImg: subImg.スプリンクラー,
+    specialImg: specialImg.エナジースタンド,
+  },
+  {
+    main: "ダイナモローラーテスラ",
+    sub: subWeapons.splatBomb,
+    special: specialWeapons.superChump,
+    mainImg: "/main/ダイナモローラーテスラ.png",
+    subImg: subImg.スプラッシュボム,
+    specialImg: specialImg.デコイチラシ,
   },
   {
     main: "ダイナモローラー冥",
@@ -434,6 +546,14 @@ export const weapons: Weapon[] = [
     subImg: subImg.タンサンボム,
     specialImg: specialImg.デコイチラシ,
   },
+  {
+    main: "ヴァリアブルローラー",
+    sub: subWeapons.inkMine,
+    special: specialWeapons.tentaMissiles,
+    mainImg: "/main/ヴァリアブルローラー.png",
+    subImg: subImg.トラップ,
+    specialImg: specialImg.マルチミサイル,
+  },
   /** チャージャー系統 */
   {
     main: "スプラチャージャー",
@@ -444,12 +564,36 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.キューインキ,
   },
   {
+    main: "スプラチャージャーコラボ",
+    sub: subWeapons.splashWall,
+    special: specialWeapons.tripleInkstrike,
+    mainImg: "/main/スプラチャージャーコラボ.png",
+    subImg: subImg.スプラッシュシールド,
+    specialImg: specialImg.トリプルトルネード,
+  },
+  {
+    main: "スプラチャージャーFRST",
+    sub: "スプリンクラー",
+    special: "カニタンク",
+    mainImg: "/main/スプラチャージャーFRST.png",
+    subImg: subImg.スプリンクラー,
+    specialImg: specialImg.カニタンク,
+  },
+  {
     main: "リッター4K",
     sub: subWeapons.inkMine,
     special: specialWeapons.waveBreaker,
     mainImg: "/main/17.png",
     subImg: subImg.トラップ,
     specialImg: specialImg.ホップソナー,
+  },
+  {
+    main: "リッター4Kカスタム",
+    sub: subWeapons.jumpBeacon,
+    special: specialWeapons.krakenRoyale,
+    mainImg: "/main/リッター4Kカスタム.png",
+    subImg: subImg.ジャンプビーコン,
+    specialImg: specialImg.テイオウイカ,
   },
   {
     main: "14式竹筒銃・甲",
@@ -466,6 +610,14 @@ export const weapons: Weapon[] = [
     mainImg: "/main/19.png",
     subImg: subImg.ポイントセンサー,
     specialImg: specialImg.グレートバリア,
+  },
+  {
+    main: "スクイックリンβ",
+    sub: subWeapons.autobomb,
+    special: "ショクワンダー",
+    mainImg: "/main/スクイックリンβ.png",
+    subImg: subImg.ロボットボム,
+    specialImg: specialImg.ショクワンダー,
   },
   {
     main: "ソイチューバー",
@@ -498,14 +650,6 @@ export const weapons: Weapon[] = [
     mainImg: "/main/23.png",
     subImg: subImg.タンサンボム,
     specialImg: specialImg.ウルトラハンコ,
-  },
-  {
-    main: "スプラチャージャーFRST",
-    sub: "スプリンクラー",
-    special: "カニタンク",
-    mainImg: "/main/スプラチャージャーFRST.png",
-    subImg: subImg.スプリンクラー,
-    specialImg: specialImg.カニタンク,
   },
   /** スピナー系統 */
   {
@@ -541,12 +685,28 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.アメフラシ,
   },
   {
+    main: "ノーチラス79",
+    sub: subWeapons.suctionBomb,
+    special: specialWeapons.tripleSplashdown,
+    mainImg: "/main/ノーチラス79.png.webp",
+    subImg: subImg.キューバンボム,
+    specialImg: specialImg.ウルトラチャクチ,
+  },
+  {
     main: "イグザミナー",
     sub: subWeapons.curlingBomb,
     special: specialWeapons.tacticooler,
     mainImg: "/main/27.png",
     subImg: subImg.カーリングボム,
     specialImg: specialImg.エナジースタンド,
+  },
+  {
+    main: "イグザミナーヒュー",
+    sub: subWeapons.splatBomb,
+    special: specialWeapons.crabTank,
+    mainImg: "/main/イグザミナー・ヒュー.png.webp",
+    subImg: subImg.スプラッシュボム,
+    specialImg: specialImg.カニタンク,
   },
   {
     main: "バレルスピナー",
@@ -615,6 +775,30 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.トリプルトルネード,
   },
   {
+    main: "バケットスロッシャーデコ",
+    sub: subWeapons.lineMarker,
+    special: "ショクワンダー",
+    mainImg: "/main/バケットスロッシャーデコ.png",
+    subImg: subImg.ラインマーカー,
+    specialImg: specialImg.ショクワンダー,
+  },
+  {
+    main: "スクリュースロッシャー",
+    sub: subWeapons.fizzyBomb,
+    special: specialWeapons.booyahBomb,
+    mainImg: "/main/スクリュースロッシャー.png",
+    subImg: subImg.タンサンボム,
+    specialImg: specialImg.ナイスダマ,
+  },
+  {
+    main: "スクリュースロッシャーネオ",
+    sub: subWeapons.pointSensor,
+    special: specialWeapons.trizooka,
+    mainImg: "/main/スクリュースロッシャーネオ.png",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg.ウルトラショット,
+  },
+  {
     main: "ヒッセン",
     sub: "ポイズンミスト",
     special: "ジェットパック",
@@ -639,12 +823,60 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.スミナガシート,
   },
   {
+    main: "モップリン",
+    sub: subWeapons.suctionBomb,
+    special: specialWeapons.reefslider,
+    mainImg: "/main/モップリン.png",
+    subImg: subImg.キューバンボム,
+    specialImg: specialImg.サメライド,
+  },
+  {
+    main: "モップリンD",
+    sub: subWeapons.jumpBeacon,
+    special: specialWeapons.waveBreaker,
+    mainImg: "/main/モップリンD.png.webp",
+    subImg: subImg.ジャンプビーコン,
+    specialImg: specialImg.ホップソナー,
+  },
+  {
     main: "モップリン角",
     sub: "カーリングボム",
     special: "カニタンク",
     mainImg: "/main/モップリン角.png",
     subImg: subImg.カーリングボム,
     specialImg: specialImg.カニタンク,
+  },
+  {
+    main: "オーバーフロッシャー",
+    sub: subWeapons.sprinkler,
+    special: specialWeapons.inkStorm,
+    mainImg: "/main/オーバーフロッシャー.png",
+    subImg: subImg.スプリンクラー,
+    specialImg: specialImg.アメフラシ,
+  },
+  {
+    main: "オーバーフロッシャーデコ",
+    sub: subWeapons.lineMarker,
+    special: specialWeapons.krakenRoyale,
+    mainImg: "/main/オーバーフロッシャーデコ.png",
+    subImg: subImg.ラインマーカー,
+    specialImg: specialImg.テイオウイカ,
+  },
+  {
+    main: "エクスプロッシャー",
+    sub: subWeapons.pointSensor,
+    special: specialWeapons.inkStorm,
+    mainImg: "/main/エクスプロッシャー.png",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg.アメフラシ,
+  },
+  {
+    main: "エクスプロッシャーカスタム",
+    sub: subWeapons.splashWall,
+    special: specialWeapons.tripleSplashdown,
+    mainImg: "/main/エクスプロッシャーカスタム.png.webp",
+    subImg: subImg.スプラッシュシールド,
+    specialImg: specialImg.ウルトラチャクチ,
   },
   /** マニューバー系統 */
   {
@@ -656,12 +888,28 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.カニタンク,
   },
   {
+    main: "スプラマニューバーコラボ",
+    sub: subWeapons.curlingBomb,
+    special: specialWeapons.tripleSplashdown,
+    mainImg: "/main/スプラマニューバーコラボ.png",
+    subImg: subImg.カーリングボム,
+    specialImg: specialImg.ウルトラチャクチ,
+  },
+  {
     main: "スプラマニューバー耀",
     sub: "タンサンボム",
     special: "グレートバリア",
     mainImg: "/main/スプラマニューバー耀.png",
     subImg: subImg.タンサンボム,
     specialImg: specialImg.グレートバリア,
+  },
+  {
+    main: "デュアルスイーパー",
+    sub: subWeapons.splatBomb,
+    special: specialWeapons.waveBreaker,
+    mainImg: "/main/デュアルスイーパー.png",
+    subImg: subImg.スプラッシュボム,
+    specialImg: specialImg.ホップソナー,
   },
   {
     main: "デュアルスイーパー蹄",
@@ -696,6 +944,57 @@ export const weapons: Weapon[] = [
     subImg: subImg.スプラッシュボム,
     specialImg: specialImg["メガホンレーザー5.1ch"],
   },
+  /** クアッドホッパー */
+  {
+    main: "クアッドホッパーブラック",
+    sub: subWeapons.autobomb,
+    special: specialWeapons.reefslider,
+    mainImg: "/main/クアッドホッパーブラック.png",
+    subImg: subImg.ロボットボム,
+    specialImg: specialImg.サメライド,
+  },
+  {
+    main: "クアッドホッパーホワイト",
+    sub: subWeapons.sprinkler,
+    special: "ショクワンダー",
+    mainImg: "/main/クアッドホッパーホワイト.png",
+    subImg: subImg.スプリンクラー,
+    specialImg: specialImg.ショクワンダー,
+  },
+  /** ケルビン */
+  {
+    main: "ケルビン525",
+    sub: subWeapons.splashWall,
+    special: specialWeapons.booyahBomb,
+    mainImg: "/main/ケルビン525.png",
+    subImg: subImg.スプラッシュシールド,
+    specialImg: specialImg.ナイスダマ,
+  },
+  {
+    main: "ケルビン525デコ",
+    sub: subWeapons.pointSensor,
+    special: specialWeapons.trizooka,
+    mainImg: "/main/ケルビン525デコ.png.webp",
+    subImg: subImg.ポイントセンサー,
+    specialImg: specialImg.ウルトラショット,
+  },
+  /** ガエン */
+  {
+    main: "ガエンFF",
+    sub: subWeapons.inkMine,
+    special: specialWeapons.killerWail,
+    mainImg: "/main/ガエンFF.png.webp",
+    subImg: subImg.トラップ,
+    specialImg: specialImg["メガホンレーザー5.1ch"],
+  },
+  {
+    main: "ガエンFFカスタム",
+    sub: subWeapons.burstBomb,
+    special: specialWeapons.tripleInkstrike,
+    mainImg: "/main/ガエンFFカスタム.png.webp",
+    subImg: subImg.クイックボム,
+    specialImg: specialImg.トリプルトルネード,
+  },
   /** ブラスター系統 */
   {
     main: "ホットブラスター",
@@ -720,6 +1019,70 @@ export const weapons: Weapon[] = [
     mainImg: "/main/ホットブラスター艶.png",
     subImg: subImg.ジャンプビーコン,
     specialImg: specialImg.カニタンク,
+  },
+  {
+    main: "ラピッドブラスター",
+    sub: subWeapons.inkMine,
+    special: specialWeapons.tripleInkstrike,
+    mainImg: "/main/ラピッドブラスター.png",
+    subImg: subImg.トラップ,
+    specialImg: specialImg.トリプルトルネード,
+  },
+  {
+    main: "ラピッドブラスターデコ",
+    sub: subWeapons.torpedo,
+    special: specialWeapons.jetPack,
+    mainImg: "/main/ラピッドブラスターデコ.png.webp",
+    subImg: subImg.トーピード,
+    specialImg: specialImg.ジェットパック,
+  },
+  {
+    main: "ロングブラスター",
+    sub: subWeapons.suctionBomb,
+    special: specialWeapons.waveBreaker,
+    mainImg: "/main/ロングブラスター.png",
+    subImg: subImg.キューバンボム,
+    specialImg: specialImg.ホップソナー,
+  },
+  {
+    main: "ロングブラスターカスタム",
+    sub: subWeapons.splatBomb,
+    special: specialWeapons.krakenRoyale,
+    mainImg: "/main/ロングブラスターカスタム.png.webp",
+    subImg: subImg.スプラッシュボム,
+    specialImg: specialImg.テイオウイカ,
+  },
+  {
+    main: "クラッシュブラスター",
+    sub: subWeapons.splatBomb,
+    special: specialWeapons.trizooka,
+    mainImg: "/main/クラッシュブラスター.png",
+    subImg: subImg.スプラッシュボム,
+    specialImg: specialImg.ウルトラショット,
+  },
+  {
+    main: "クラッシュブラスターネオ",
+    sub: subWeapons.curlingBomb,
+    special: specialWeapons.superChump,
+    mainImg: "/main/クラッシュブラスターネオ.png.webp",
+    subImg: subImg.カーリングボム,
+    specialImg: specialImg.デコイチラシ,
+  },
+  {
+    main: "Rブラスターエリート",
+    sub: subWeapons.poisonMist,
+    special: specialWeapons.inkVac,
+    mainImg: "/main/Rブラスターエリート.png",
+    subImg: subImg.ポイズンミスト,
+    specialImg: specialImg.キューインキ,
+  },
+  {
+    main: "Rブラスターエリートデコ",
+    sub: subWeapons.lineMarker,
+    special: specialWeapons.killerWail,
+    mainImg: "/main/Rブラスターエリートデコ.png",
+    subImg: subImg.ラインマーカー,
+    specialImg: specialImg["メガホンレーザー5.1ch"],
   },
   /** ノヴァ */
   {
@@ -763,6 +1126,31 @@ export const weapons: Weapon[] = [
     mainImg: "/main/37.png",
     subImg: subImg.スプリンクラー,
     specialImg: specialImg.ジェットパック,
+  },
+  {
+    main: "パラシェルターソレーラ",
+    sub: subWeapons.autobomb,
+    special: specialWeapons.jetPack,
+    mainImg: "/main/パラシェルターソレーラ.png",
+    subImg: subImg.ロボットボム,
+    specialImg: specialImg.ジェットパック,
+  },
+  /** 24式張替傘 */
+  {
+    main: "24式張替傘・甲",
+    sub: subWeapons.lineMarker,
+    special: specialWeapons.bigBarrier,
+    mainImg: "/main/24式張替傘・甲.png",
+    subImg: subImg.ラインマーカー,
+    specialImg: specialImg.グレートバリア,
+  },
+  {
+    main: "24式張替傘・乙",
+    sub: subWeapons.poisonMist,
+    special: specialWeapons.tripleSplashdown,
+    mainImg: "/main/24式張替傘・乙.png.webp",
+    subImg: subImg.ポイズンミスト,
+    specialImg: specialImg.ウルトラチャクチ,
   },
   /** 黒傘 */
   {
@@ -824,6 +1212,14 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.ウルトラハンコ,
   },
   {
+    main: "ドライブワイパーデコ",
+    sub: subWeapons.jumpBeacon,
+    special: specialWeapons.tentaMissiles,
+    mainImg: "/main/ドライブワイパーデコ.png",
+    subImg: subImg.ジャンプビーコン,
+    specialImg: specialImg.マルチミサイル,
+  },
+  {
     main: "ドライブワイパーRUST",
     sub: "カーリングボム",
     special: "ウルトラショット",
@@ -855,6 +1251,22 @@ export const weapons: Weapon[] = [
     subImg: subImg.ロボットボム,
     specialImg: specialImg.ナイスダマ,
   },
+  {
+    main: "デンタルワイパーミント",
+    sub: subWeapons.suctionBomb,
+    special: specialWeapons.bigBarrier,
+    mainImg: "/main/デンタルワイパーミント.png.webp",
+    subImg: subImg.キューバンボム,
+    specialImg: specialImg.グレートバリア,
+  },
+  {
+    main: "デンタルワイパースミ",
+    sub: subWeapons.splashWall,
+    special: specialWeapons.jetPack,
+    mainImg: "/main/デンタルワイパースミ.png.webp",
+    subImg: subImg.スプラッシュシールド,
+    specialImg: specialImg.ジェットパック,
+  },
   /** ストリンガー系統 */
   {
     main: "LACT-450",
@@ -865,6 +1277,14 @@ export const weapons: Weapon[] = [
     specialImg: specialImg.マルチミサイル,
   },
   {
+    main: "LACT-450デコ",
+    sub: subWeapons.splashWall,
+    special: specialWeapons.reefslider,
+    mainImg: "/main/LACT-450デコ.png",
+    subImg: subImg.スプラッシュシールド,
+    specialImg: specialImg.サメライド,
+  },
+  {
     main: "LACT-450MILK",
     sub: "トーピード",
     special: "ナイスダマ",
@@ -872,7 +1292,7 @@ export const weapons: Weapon[] = [
     subImg: subImg.トーピード,
     specialImg: specialImg.ナイスダマ,
   },
-  /** トラスト */
+  /** トライストリンガー */
   {
     main: "トライストリンガー",
     sub: "ポイズンミスト",
