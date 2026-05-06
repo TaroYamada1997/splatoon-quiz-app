@@ -1,33 +1,33 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ブキルーレット | スプラトゥーン3",
+  title: "スプラトゥーン3 ブキルーレット｜武器をランダムに振り分け【無料】",
   description:
-    "スプラトゥーン3のブキをランダムに割り当てる無料ルーレット。最大8人のプレイヤーに武器を自動で振り分け！結果をURLでシェアしてフレンドと遊ぼう。",
+    "スプラトゥーン3のブキルーレット無料ツール。スプラトゥーン ブキ ルーレットで最大8人に武器をランダム振り分け！武器決めやブキ割り当てに。結果をURLでシェアしてフレンドと遊ぼう。",
   keywords:
-    "スプラトゥーン ルーレット,スプラ3 ブキ ルーレット,スプラトゥーン 武器 ランダム,スプラトゥーン3 武器決め,スプラトゥーン3 ブキ振り分け,Splatoon roulette,スプラ ルーレット,スプラ3 ランダム武器",
+    "スプラトゥーン ブキ ルーレット,スプラトゥーン3 ルーレット,スプラ3 ブキ ルーレット,スプラトゥーン 武器 ランダム,スプラトゥーン3 武器決め,スプラ ルーレット,スプラトゥーン3 ブキ振り分け,Splatoon roulette,スプラ3 ランダム武器,武器決め ランダム",
   openGraph: {
-    title: "ブキルーレット | スプラトゥーン3",
+    title: "スプラトゥーン3 ブキルーレット｜武器をランダムに振り分け",
     description:
-      "最大8人のプレイヤーにブキをランダム割り当て！結果をURLでシェアできる無料ルーレット。",
+      "スプラトゥーン ブキ ルーレットで最大8人に武器をランダム振り分け！武器決めに使える無料ツール。結果をURLでシェアできます。",
     type: "website",
-    url: "https://splatoon3-quiz.com/roulette",
+    url: "https://www.splatoon3-quiz.com/roulette",
     images: [
       {
-        url: "https://splatoon3-quiz.com/ogp.png",
+        url: "https://www.splatoon3-quiz.com/ogp.png",
         width: 1200,
         height: 630,
         alt: "スプラトゥーン3 ブキルーレット",
       },
     ],
-    siteName: "スプラトゥーン クイズ",
+    siteName: "スプラトゥーン クイズ＆ブキルーレット",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ブキルーレット | スプラトゥーン3",
+    title: "スプラトゥーン3 ブキルーレット｜武器をランダムに振り分け",
     description:
-      "最大8人のプレイヤーにブキをランダム割り当て！結果をURLでシェアできる無料ルーレット。",
-    images: ["https://splatoon3-quiz.com/ogp.png"],
+      "スプラトゥーン ブキ ルーレットで最大8人に武器をランダム振り分け！武器決めに使える無料ツール。",
+    images: ["https://www.splatoon3-quiz.com/ogp.png"],
   },
 };
 
