@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     description:
       "スプラトゥーン ブキ ルーレットで最大8人に武器をランダム振り分け！武器決めに使える無料ツール。結果をURLでシェアできます。",
     type: "website",
-    url: "https://www.splatoon3-quiz.com/roulette",
+    url: "https://splatoon3-quiz.com/roulette",
     images: [
       {
-        url: "https://www.splatoon3-quiz.com/ogp.png",
+        url: "https://splatoon3-quiz.com/ogp.png",
         width: 1200,
         height: 630,
         alt: "スプラトゥーン3 ブキルーレット",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "スプラトゥーン3 ブキルーレット｜武器をランダムに振り分け",
     description:
       "スプラトゥーン ブキ ルーレットで最大8人に武器をランダム振り分け！武器決めに使える無料ツール。",
-    images: ["https://www.splatoon3-quiz.com/ogp.png"],
+    images: ["https://splatoon3-quiz.com/ogp.png"],
   },
 };
 
