@@ -881,10 +881,10 @@ export const weapons: Weapon[] = [
   /** マニューバー系統 */
   {
     main: "スプラマニューバー",
-    sub: subWeapons.burstBomb,
+    sub: subWeapons.suctionBomb,
     special: specialWeapons.crabTank,
     mainImg: "/main/34.png",
-    subImg: subImg.スプラッシュボム,
+    subImg: subImg.キューバンボム,
     specialImg: specialImg.カニタンク,
   },
   {
