@@ -1009,7 +1009,7 @@ export const weapons: Weapon[] = [
     sub: subWeapons.curlingBomb,
     special: specialWeapons.tripleSplashdown,
     mainImg: "/main/36.png",
-    subImg: subImg.カーリングボム,
+    subImg: subImg.ポイントセンサー,
     specialImg: specialImg.ウルトラチャクチ,
   },
   {
