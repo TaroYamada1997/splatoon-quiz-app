@@ -1006,7 +1006,7 @@ export const weapons: Weapon[] = [
   },
   {
     main: "ホットブラスターカスタム",
-    sub: subWeapons.curlingBomb,
+    sub: subWeapons.pointSensor,
     special: specialWeapons.tripleSplashdown,
     mainImg: "/main/36.png",
     subImg: subImg.ポイントセンサー,
