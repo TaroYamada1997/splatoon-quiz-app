@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "splatoon-quiz-app",
+  "compatibility_date": "2026-11-01",
+  // next build で書き出した静的ファイルをそのまま配信する（Worker のコードは無し）
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
